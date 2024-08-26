@@ -2,7 +2,7 @@
 
 # 1 可视化效果
 
-![image-20240826151826181](C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20240826151826181.png)
+![image-20240826151826181](./pics/1.png)
 
 
 
