@@ -41,6 +41,20 @@ RUN apt-get update && apt-get install -y code
 # 设置工作目录
 WORKDIR /workspace
 
+RUN apt-get install -y python3.8
+
+# 使用清华大学的镜像源安装 Python 依赖包
+RUN pip install python3-tk gym numpy matplotlib torch -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 安装图形显示的中文支持
+RUN apt-get install -y x11-apps
+RUN apt-get -y install locales xfonts-intl-chinese fonts-wqy-microhei
+
+# 配置 locales 以支持中文
+RUN dpkg-reconfigure locales
+
+# 将当前文件夹中的 The_Coding 文件夹复制到容器的工作目录
+COPY ./The_Coding_Foundation_in_Reinforcement_Learning /workspace/The_Coding_Foundation_in_Reinforcement_Learning
 # 暴露code-server的默认端口
 EXPOSE 8080
 

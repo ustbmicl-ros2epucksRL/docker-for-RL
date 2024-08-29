@@ -11,12 +11,34 @@
 ## 2.1 使用dockerfile构建基础镜像
 
 ```
+git clone https://github.com/ustbmicl-ros2epucksRL/docker-for-RL.git
+cd docker_lbw
 docker build -t myimage:v1.0 .
 ```
 
 随后在docker desktop中运行镜像，记得挂载目录并填入显示图形界面所需的环境变量。
 
-## 2.2 安装所需环境
+在项目根目录下运行examples/main.py ，您应能看到图形界面并与之交互。
+
+部分代码可能存在bug，源项目地址：https://github.com/SupermanCaozh/The_Coding_Foundation_in_Reinforcement_Learning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 2.2 安装所需环境（废弃）
 
 首先复制The_Coding_Foundation_in_Reinforcement_Learning文件夹至你容器的挂载目录内，随后安装环境：
 
